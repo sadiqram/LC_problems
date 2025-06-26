@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class Solution:
     #  Approach 1
     #     count how many times each character appears in s using a hashmap.
@@ -30,3 +33,8 @@ class Solution:
 
     # Time complexity O(n) where n is the length of the string
     #  Space complexity: O(1) there are at most 26 letters for lowercase input, but the inut size is still fixed/constant, therefor O(1) space is used
+
+    #  Approach 2 ( troll approach, more efficient)
+
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
