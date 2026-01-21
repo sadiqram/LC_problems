@@ -38,3 +38,14 @@ class Solution:
 
     def isAnagram(self, s: str, t: str) -> bool:
         return Counter(s) == Counter(t)
+
+    def isAnagram(self, s: str, t: str) -> bool:
+        s_map = {char: 0 for char in s}
+        t_map = {char: 0 for char in t}
+
+        for char in s:
+            s_map[char] += 1
+        for char in t:
+            t_map[char] += 1
+
+        return s_map == t_map
