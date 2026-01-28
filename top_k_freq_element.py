@@ -15,7 +15,7 @@ class Solution:
         for key, v in freq.items():
             # Use -v because pq is implemented with minheap
             # so to get highest value we need to use negative value
-            # if most freq is 4, we store -4, ex: 4,3,2,1 becomes -4,-3,-2,-1
+            # if most freq is 4, we store -4, ex: 4,3,2,1 becomes -4,-3,-2,-1, its a mathematical prop i think
             pq.put((-v, key))
 
         i = 0
